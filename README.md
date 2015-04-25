@@ -15,9 +15,9 @@ Include `loading.css` and `loading.js` in `<head>`:
 
 Use `<div class="loading-full-page"></i>` or `<i class="loading-block"></div>`  to create a loading-effect layer. `.loading-full-page` for making a full-page layer and `.loading-block` for a block-inner layer.
 
-And class `.loading-running` lets the layer animation running at beginning.
+And class `.loading-init` lets the layer animation running at beginning.
 
-**Notice that `.loading-block` should be contained by an inline-block or any box-sized element.**
+**Notice that `.loading-block` should be contained by an inline-block or any box-sized element, and `position: relative`.**
 
 #### JavaScript
 

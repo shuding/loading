@@ -56,6 +56,7 @@
   }
 }
 
+/*
 @keyframes loading-background-banner-theme-paper {
   50% {
     -webkit-transform: translate3d(0, 0, 0) rotateX(0) rotateY(180deg);
@@ -72,6 +73,7 @@
     transform: translate3d(0, 0, 0) rotateX(180deg) rotateY(180deg);
   }
 }
+*/
 
 @keyframes loading-change-text {
   40% {
@@ -144,18 +146,18 @@
 
 @-webkit-keyframes loading-background-banner-theme-paper {
   50% {
-    -webkit-transform: translate3d(0, 0, 0) rotateX(0) rotateY(180deg);
-    -moz-transform: translate3d(0, 0, 0) rotateX(0) rotateY(180deg);
-    -ms-transform: translate3d(0, 0, 0) rotateX(0) rotateY(180deg);
-    -o-transform: translate3d(0, 0, 0) rotateX(0) rotateY(180deg);
-    transform: translate3d(0, 0, 0) rotateX(0) rotateY(180deg);
+    -webkit-transform: translate3d(0, 0, -101px) rotateX(0) rotateY(180deg);
+    -moz-transform: translate3d(0, 0, -101px) rotateX(0) rotateY(180deg);
+    -ms-transform: translate3d(0, 0, -101px) rotateX(0) rotateY(180deg);
+    -o-transform: translate3d(0, 0, -101px) rotateX(0) rotateY(180deg);
+    transform: translate3d(0, 0, -101px) rotateX(0) rotateY(180deg);
   }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotateX(180deg) rotateY(180deg);
-    -moz-transform: translate3d(0, 0, 0) rotateX(180deg) rotateY(180deg);
-    -ms-transform: translate3d(0, 0, 0) rotateX(180deg) rotateY(180deg);
-    -o-transform: translate3d(0, 0, 0) rotateX(180deg) rotateY(180deg);
-    transform: translate3d(0, 0, 0) rotateX(180deg) rotateY(180deg);
+    -webkit-transform: translate3d(0, 0, -101px) rotateX(180deg) rotateY(180deg);
+    -moz-transform: translate3d(0, 0, -101px) rotateX(180deg) rotateY(180deg);
+    -ms-transform: translate3d(0, 0, -101px) rotateX(180deg) rotateY(180deg);
+    -o-transform: translate3d(0, 0, -101px) rotateX(180deg) rotateY(180deg);
+    transform: translate3d(0, 0, -101px) rotateX(180deg) rotateY(180deg);
   }
 }
 
@@ -241,6 +243,14 @@
 
   -webkit-filter: drop-shadow(10px 10px 0 rgba(0,0,0,0.2));
   filter: drop-shadow(10px 10px 0 rgba(0,0,0,0.2));
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .loading-full-page .loading-after {
+    width: 187px;
+    height: 47px;
+    background-size: 100% 93px;
+  }
 }
 
 .loading-block .loading-after {
@@ -340,27 +350,43 @@
 }
 
 .loading-theme-paper .loading-full-page, .loading-theme-paper .loading-block {
-  -webkit-perspective: 200px;
-  perspective: 200px;
+  -webkit-perspective: 400px;
+  perspective: 400px;
   background-color: #333;
 }
 
 .loading-theme-paper .loading-init,.loading-theme-paper .loading-full-page .loading-before, .loading-theme-paper .loading-block .loading-before {
+  width: 200px;
+  height: 200px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
   background-color: #333;
   background-image: linear-gradient(to bottom, #FFFA19 0%, #FFFA19 100%);
-  background-size: 100px 100px;
+  background-size: 200px 200px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 
+  -webkit-transform: translate3d(0, 0, -101px) rotateZ(0);
+  -moz-transform: translate3d(0, 0, -101px) rotateZ(0);
+  -ms-transform: translate3d(0, 0, -101px) rotateZ(0);
+  -o-transform: translate3d(0, 0, -101px) rotateZ(0);
+  transform: translate3d(0, 0, -101px) rotateZ(0);
+
+  -webkit-animation: 1s loading-background-banner-theme-paper ease-in-out infinite;
+  -o-animation: 1s loading-background-banner-theme-paper ease-in-out infinite;
+  animation: 1s loading-background-banner-theme-paper ease-in-out infinite;
+}
+
+.loading-theme-paper .loading-init, .loading-theme-paper .loading-after {
   -webkit-transform: translate3d(0, 0, 0) rotateZ(0);
   -moz-transform: translate3d(0, 0, 0) rotateZ(0);
   -ms-transform: translate3d(0, 0, 0) rotateZ(0);
   -o-transform: translate3d(0, 0, 0) rotateZ(0);
   transform: translate3d(0, 0, 0) rotateZ(0);
-
-  -webkit-animation: 1s loading-background-banner-theme-paper ease-in-out infinite;
-  -o-animation: 1s loading-background-banner-theme-paper ease-in-out infinite;
-  animation: 1s loading-background-banner-theme-paper ease-in-out infinite;
 }
 
 .loading-init.loading-block {

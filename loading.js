@@ -85,14 +85,18 @@
     };
 
     window.addEventListener('load', function () {
-        var elArray = document.getElementsByClassName('loading-running');
+        var elArray = document.getElementsByClassName('loading-init');
 
         [].forEach.call(elArray, function (el) {
             el.parentNode.style.position = 'relative';
+            el.className = el.className.split('loading-init').join(' ') + ' loading-running';
         });
 
-        var afterElArray = document.querySelectorAll('.loading-full-page:after, .loading-block:after');
-        console.log(afterElArray);
+        elArray = document.querySelectorAll('.loading-full-page, .loading-block');
+        [].forEach.call(elArray, function (el) {
+            // iOS do not support animation for pseudo-elements
+            el.innerHTML = "<i class='loading-before'></i><i class='loading-after'></i>";
+        });
     }, false);
 
     window.loading = loading();

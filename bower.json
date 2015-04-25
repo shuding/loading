@@ -1,0 +1,26 @@
+{
+	"name": "loading",
+	"main": [
+		"loading.js",
+		"loading.css"
+	],
+	"version": "0.0.1",
+	"authors": [
+		"quietshu <ds303077135@gmail.com>"
+	],
+	"description": "Another CSS3 loading animation tool for full-page & blocks.",
+	"keywords": [
+		"CSS3",
+		"loading",
+		"animation"
+	],
+	"license": "MIT",
+	"homepage": "https://github.com/quietshu/loading",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>loading</title>
+  <link rel="stylesheet" href="loading.css">
+  <script type="text/javascript" src="loading.js"></script>
+</head>
+<body>
+
+<style>
+  .grid {
+    display: inline-block;
+    margin: 10px;
+  }
+</style>
+
+<h1>Demos</h1>
+
+<i id="layer-1" class="loading-full-page loading-text loading-running"></i>
+
+<div class="grid loading-theme-steps">
+  <i class="foo loading-block"></i>
+  <img src="http://placehold.it/300x200/">
+</div>
+<div class="grid loading-theme-seigaiha">
+  <i class="foo loading-block"></i>
+  <img src="http://placehold.it/300x200/">
+</div>
+<div class="grid">
+  <i class="foo loading-block"></i>
+  <img src="http://placehold.it/300x200/">
+</div>
+<div class="grid loading-theme-spinner">
+  <i class="foo loading-block"></i>
+  <img src="http://placehold.it/300x200/">
+</div>
+<div class="grid loading-theme-paper">
+  <i class="foo loading-block"></i>
+  <img src="http://placehold.it/300x200/">
+</div>
+
+<br>
+
+<button onclick="loading.start('.foo').wait(500).end('.foo')">Reload</button>
+<button onclick="loading.start('.foo')">Load</button>
+<button onclick="loading.end('.foo')">Stop</button>
+
+<script type="text/javascript">
+  loading.wait(3000).end('#layer-1');
+  loading.start('.foo').wait(6000).end('.foo');
+</script>
+
+</body>
+</html>

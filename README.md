@@ -5,7 +5,14 @@ Another CSS3 loading animation tool for full-page &amp; blocks.
 
 ## Brief Usage of `loading`
 
+Install with bower:
+
+```
+$ bower install loading.js
+```
+
 #### HTML
+
 Include `loading.css` and `loading.js` in `<head>`:
   
 ```html

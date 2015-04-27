@@ -1,4 +1,7 @@
 # loading
+
+[![bower-v](https://img.shields.io/bower/v/loading.js.svg)](https://github.com/quietshu/loading)
+
 Another CSS3 loading animation tool for full-page &amp; blocks.
 
 [Demo](http://shud.in/loading)
